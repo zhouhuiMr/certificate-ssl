@@ -1,0 +1,22 @@
+server:
+  port: 9018
+
+aliyun:
+  accessKeyId: 1111                     ##在阿里云创建RAM账号
+  accessKeySecret: 1111                 ##在阿里云创建RAM账号
+  sslEndpoint: cas.aliyuncs.com
+  ssl:
+    advance: 10                         ##到期前的天数
+    productCode: digicert-free-1-free 
+    userName: 张三                       ##阿里云的用户名
+    phone: 18765******                  ##阿里云的手机号
+    email: 1430******@qq.com            ##阿里云的邮箱地址
+    domain: www.******.com              ##申请证书的域名
+    validateType: FILE                  ##DNS/FILE（建议用FILE，将认证信息写入对应的路径）
+    validateFileUrl: /nginx/conf        ##验证文件的路径（如果选择“FILE”验证，必须填写）
+    savePath: /nginx/conf               ##证书保存的路径
+    expiredPeriod: 10                   ##超期保存天数 
+script:
+  type: Linux                           ##Linux/Window
+  path:                                 ##脚本的路径，如果不希望执行脚本则不需要填写值（方便重启nginx）
+
